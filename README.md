@@ -1,40 +1,40 @@
 # YuvaIntern Week 2 — Advanced Data Visualization and Storytelling
 
-## Main submission
+## Download and run
 
-Upload `YuvaIntern_Week2_Report.docx` to the Week 2 report field. Paste `submission_description.txt` into the description box. Upload this folder's contents to your GitHub project and paste that project's URL into the portal.
+Download and extract `YuvaIntern_Week2_Complete_Package.zip` before running the analysis. The archive contains all 18 project files, including the required `data/`, `charts/` and `tables/` folders, the report and the submission description. The loose Python and notebook files in this repository are provided for convenient code review.
 
-## Run
-
-Tested with Python 3.12.14. From this folder:
+From the extracted package folder, using Python 3.12:
 
 ```sh
 python -m pip install -r requirements.txt
 python analysis.py
 ```
 
-The script resolves paths relative to itself. For Jupyter, install Jupyter separately and open `analysis.ipynb` from this folder; run all cells. Notebook outputs start empty. The analysis script was executed successfully to create the included outputs. Running it regenerates figures and CSV tables, not the Word report.
+For Jupyter, install Jupyter separately, open `analysis.ipynb` from the extracted folder, and run all cells. Notebook outputs start empty. The Python script was executed successfully to generate the supplied figures and tables. It regenerates data and charts, not the Word report.
 
-## Five visualizations
+## Report and five visualizations
 
-1. Annotated species-by-island count heatmap.
-2. Cumulative body-mass distributions by species.
-3. Sex comparison with box plots and individual points, faceted by species.
-4. Flipper–mass scatter plots with descriptive fits and correlations within species.
-5. Annual median body mass with sample-size annotations.
+The main report is `YuvaIntern_Week2_Report.docx`. It includes methods, captions, visual-selection rationale, insights, limitations and scientific implications.
 
-`charts/` holds PNGs, `data/` holds source and cleaned CSVs, and `tables/` holds numerical summaries and audit metadata. The analysis uses 342 measurement-complete records, or 333 known-sex records for the sex comparison. Random jitter uses seed 42 and affects display only.
+1. Species-by-island count heatmap.
+2. Cumulative body-mass distributions.
+3. Sex comparison using box plots and individual points.
+4. Within-species flipper–mass relationships.
+5. Annual median body mass with sample sizes.
 
-## Source
+The analysis retains 342 measurement-complete records; the sex comparison uses 333 records with known sex. Display jitter uses seed 42.
+
+## Data source
 
 Horst AM, Hill AP, Gorman KB (2020), palmerpenguins. Data collected by Kristen Gorman and Palmer Station LTER; distributed under CC0.
 
-- Documentation: https://allisonhorst.github.io/palmerpenguins/
-- CSV: https://raw.githubusercontent.com/allisonhorst/palmerpenguins/main/inst/extdata/penguins.csv
-- Snapshot downloaded on 30 September 2026 for Week 1 and reused here; checksum in `tables/audit.json`.
+Documentation: https://allisonhorst.github.io/palmerpenguins/
 
-The local file `penguins_raw.csv` contains the simplified eight-column CSV, not the project's separate 17-column dataset.
+Source CSV: https://raw.githubusercontent.com/allisonhorst/palmerpenguins/main/inst/extdata/penguins.csv
 
-## Submission notes
+The source snapshot was downloaded on 30 September 2026 and reused from Week 1. Its checksum is in `tables/audit.json` inside the package. The local `penguins_raw.csv` is the simplified eight-column dataset.
 
-All five chart images were visually checked. The automatic DOCX renderer was unavailable, so final Word pagination remains unverified; check the DOCX layout in Word before uploading. No repository was created or uploaded automatically. The estimated 30–35 hour workload in the task PDF is not a claim of actual time spent.
+## Validation
+
+Code execution, five embedded figures, notebook syntax, subgroup counts and archive integrity were checked. All five chart images were visually inspected. Automatic DOCX rendering was unavailable, so final Word pagination remains unverified. The internship workload estimate is not a claim of hours worked.
